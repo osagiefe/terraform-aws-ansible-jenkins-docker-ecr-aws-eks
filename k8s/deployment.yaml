@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pyapp
+  namespace: argocd   # 👈 add this
+  labels:
+    app: pyapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pyapp
+  template:
+    metadata:
+      labels:
+        app: pyapp
+    spec:
+      containers:
+        - name: pyapp
+          image: osagiefe/pyapplication:v1
+          ports:
+            - containerPort: 8080

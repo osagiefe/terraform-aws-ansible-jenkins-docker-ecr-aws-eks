@@ -1,0 +1,24 @@
+{
+  "name": "terraform-aws-ansible-jenkins-docker-ecr-aws-eks",
+  "version": "1.0.0",
+  "description": "An end-end deployment of a python app using DevOps tools to automate all process and workflows, also ensuring to follow DevOps best practices.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osagiefe/terraform-aws-ansible-jenkins-docker-ecr-aws-eks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/osagiefe/terraform-aws-ansible-jenkins-docker-ecr-aws-eks/issues"
+  },
+  "homepage": "https://github.com/osagiefe/terraform-aws-ansible-jenkins-docker-ecr-aws-eks#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

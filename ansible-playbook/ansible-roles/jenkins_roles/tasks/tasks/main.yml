@@ -1,0 +1,37 @@
+   - name: updating apt and cache on all ubuntu servers
+     apt:
+       upgrade: yes
+       update_cache: yes
+   - name: ensure the jenkins apt repository key is installed
+     apt_key:
+       url: https://pkg.jenkins.io/debian/jenkins.io-2023.key 
+       state: present
+
+
+   - name: setting up jenkins repo
+      
+     apt_repository: 
+       repo: 'deb https://pkg.jenkins.io/debian-stable binary/'
+       state: present
+       
+   - name: ensure the jenkins apt repository key is installed
+     apt_key:
+       url: https://pkg.jenkins.io/debian/jenkins.io-2023.key 
+       state: present
+
+   - name: Install OpenJDK Java
+     apt:
+       name: "{{ item }}"
+       state: present
+     with_items: 
+      openjdk-17-jre
+       
+   - name: installing jenkins software   #it takes some time while downloading jenkins be Subtle
+     apt:
+       name: jenkins
+       state: present
+
+   - name: start the service
+     service:
+       name: jenkins
+       state: started
