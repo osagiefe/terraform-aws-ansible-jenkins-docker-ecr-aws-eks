@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: pyapp
-          image: osagiefe/pyapplication:v1
+          image: osagiefe/pyapplication:v2
           ports:
             - containerPort: 8080
