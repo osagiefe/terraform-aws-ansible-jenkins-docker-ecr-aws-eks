@@ -6,7 +6,7 @@ metadata:
   labels:
     app: pyapp
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: pyapp
@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
         - name: pyapp
-          image: osagiefe/pyapplication:v2
+          image: osagiefe/pyapplication:v1
           ports:
             - containerPort: 8080
